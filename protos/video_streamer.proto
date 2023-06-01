@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package droniada_vid_stream;
+
+message StreamRequest {
+  int32 cap = 1;
+  int32 height = 2;
+}
+
+message Image {
+  bytes data = 1;
+}
+
+service VideoStreamer {
+  rpc Stream (StreamRequest) returns (stream Image) {}
+}

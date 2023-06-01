@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "droniada-vid-stream"
+version = "0.1.0"
+description = ""
+authors = ["Carbon225 <carbon225@protonmail.com>"]
+readme = "README.md"
+packages = [{include = "droniada_vid_stream"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+grpcio = "^1.54.2"
+opencv-python = "^4.7.0.72"
+
+
+[tool.poetry.group.dev.dependencies]
+urllib3 = "<2.0.0"
+grpcio-tools = "^1.54.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
